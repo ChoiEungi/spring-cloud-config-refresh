@@ -1,0 +1,3 @@
+rootProject.name = 'spring-config-refresh'
+include("client-api")
+include("cloud-server")

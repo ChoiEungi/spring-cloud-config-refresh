@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///Users/eungi/IdeaProjects/spring-config-refresh/cloud-server/src/main/resources/config
+        bootstrap: true
+
+logging:
+  level:
+    root: debug

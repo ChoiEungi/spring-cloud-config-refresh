@@ -1,0 +1,9 @@
+default:
+  is:
+    applied: true
+
+test:
+  hello: 123
+
+my:
+  value: "local profile my.value"

@@ -1,0 +1,5 @@
+test:
+  hello: "default profile test.hello value"
+
+my:
+  value: "modified25 default profile my.value"

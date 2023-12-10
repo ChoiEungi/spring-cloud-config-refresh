@@ -1,0 +1,41 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: client-api
+
+  cloud:
+    config:
+      enabled: true
+
+  config:
+    import: configserver:http://localhost:8081
+
+  redis:
+    host: localhost
+    port: 6379
+
+management:
+  endpoint:
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: info
+
+application:
+  config:
+    refresh:
+      auto:
+        v2:
+          enabled: true
+        v3:
+          enabled: false

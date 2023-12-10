@@ -1,0 +1,9 @@
+profile:
+  dev: true
+
+dev:
+  is:
+    applied: true
+
+my:
+  value: "dev profile my.value"
