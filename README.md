@@ -18,7 +18,7 @@
 
 cloud-server
 - spring cloud config server
-- need to modify ABSOLUTE_PATH to your local directory application.yml for fetching config files from local directory 
+- need to modify ABSOLUTE_PATH to your local directory in application.yml for fetching config files from local directory 
 
 ```yml
 spring:
