@@ -32,8 +32,8 @@ public class ConfigRefreshScheduler {
       if (!CollectionUtils.isEmpty(refreshedKeys)) {
         log.info("[Refreshed] " + String.join(",", refreshedKeys));
         contextRefresher.refresh();
+        log.info("Changed value: {}" ,testValueProperties.getMy().getValue());
       }
-      log.info(testValueProperties.getMy().getValue());
     } catch (Exception e) {
       log.error("config refresh failed {}", e);
     }
@@ -43,7 +43,7 @@ public class ConfigRefreshScheduler {
   @Bean
   public ThreadPoolTaskExecutor refreshThreadPoolExecutor() {
     ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
-    threadPoolTaskExecutor.setThreadNamePrefix("refreshThreadPoolExecutor");
+    threadPoolTaskExecutor.setThreadNamePrefix("refresh");
     threadPoolTaskExecutor.setCorePoolSize(1);
     threadPoolTaskExecutor.setMaxPoolSize(1);
     threadPoolTaskExecutor.setQueueCapacity(Integer.MAX_VALUE);
