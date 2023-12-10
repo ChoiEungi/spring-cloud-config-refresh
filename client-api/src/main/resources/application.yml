@@ -17,4 +17,4 @@ application:
   config:
     refresh:
       auto:
-        enabled: false
+        enabled: true
